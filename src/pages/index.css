@@ -127,6 +127,15 @@ table {
 	border-spacing: 0;
 }
 
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	line-height: 1.5;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lusitana");
 
 @font-face {
