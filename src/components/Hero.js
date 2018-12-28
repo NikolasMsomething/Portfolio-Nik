@@ -6,10 +6,11 @@ export default function Hero({ data }) {
 	return (
 		<>
 			<HeroDiv>
+				<div className="overlay" />
 				<ImgX fluid={data.hero.childImageSharp.fluid} className="hero-img" />
 				<Main className="hello">
-					<h1>MY NAME IS NIKOLAS, </h1>
-					<p>Let's grow together</p>
+					<h1>NIKOLAS MELGAREJO </h1>
+					<p>Full-Stack Web Developer</p>
 				</Main>
 			</HeroDiv>
 		</>
@@ -24,6 +25,17 @@ const ImgX = styled(Img)`
 
 const HeroDiv = styled.div`
 	height: 100vh;
+	.overlay {
+		z-index: 1;
+    	height: 100vh;
+		width: 100%;
+    	position: absolute;
+    	overflow: hidden;
+    	top: 0px;
+   		left: 0px;
+   		background: rgba(0, 0, 0, 0.45);
+}
+	}
 `;
 
 const Main = styled.div`
@@ -34,17 +46,33 @@ const Main = styled.div`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	margin-right: -50%;
+	z-index: 94;
 	h1 {
-		font-size: 80px;
+		font-size: 4rem;
+		font-weight: 400;
 		color: white;
 		font-family: Lora;
+		cursor: pointer;
 	}
 
 	p {
 		font-family: Lora;
-		font-size: 2rem;
+		font-size: 3rem;
 		color: white;
+		cursor: pointer;
 		margin-top: 10px;
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 2rem;
+			color: white;
+			font-family: Lora;
+		}
+
+		p {
+		}
 	}
 `;
 

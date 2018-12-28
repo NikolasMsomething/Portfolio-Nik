@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 import { debounce } from 'lodash';
 import './layout.scss';
+import { FaGithub, FaLinkedinIn, FaCloudMoon } from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
 
 const Primary = 'rgb(27, 102, 47)';
 
@@ -20,7 +22,7 @@ export default class extends Component {
 		this.state = {
 			navbar: ''
 		};
-		this.listenScrollEvent = debounce(this.scrollEvent);
+		this.listenScrollEvent = debounce(this.scrollEvent, 10);
 	}
 
 	componentDidMount() {
@@ -44,11 +46,11 @@ export default class extends Component {
 	//HAVE TO CANCEL DEBOUNCE BECAUSE OF ASYNCHRONISITY... FUNCTION TRIES TO RESOLVE ON UNMOUNTED COMPONENT
 
 	scrollEvent = () => {
-		if (window.pageYOffset > 50) {
+		if (window.pageYOffset > 50 && window.pageXOffset < 100) {
 			this.setState({ navbar: 'navbar-top-off' }, () =>
 				console.log(this.state)
 			);
-		} else {
+		} else if (window.pageYOffset === 0) {
 			this.setState({ navbar: 'navbar-top' }, () => console.log(this.state));
 		}
 	};
@@ -71,6 +73,15 @@ export default class extends Component {
 					</Ul>
 				</Header>
 				{this.props.children}
+				<Footer>
+					<h3>
+						Make your dreams reality
+						<span className="cloud">
+							<FaCloudMoon />
+						</span>
+					</h3>
+					<h4>Coded by Nikolas</h4>
+				</Footer>
 			</>
 		);
 	}
@@ -87,7 +98,7 @@ const Header = styled.header`
 	padding: 10px;
 	position: fixed;
 	top: 0;
-	z-index: 99;
+	z-index: 100;
 `;
 
 const Ul = styled.ul`
@@ -142,4 +153,26 @@ const LcA = styled(Link)`
 	font-size: 1.15rem;
 	margin: auto;
 	color: white;
+`;
+
+const Footer = styled.footer`
+	width: 100%;
+	background-color: #22211a;
+	padding: 2%;
+	font-family: Lora;
+	text-align: center;
+	h3 {
+		color: white;
+	}
+	h4 {
+		color: white;
+	}
+
+	.cloud {
+		margin-right: -11px;
+	}
+
+	svg {
+		margin-left: 5px;
+	}
 `;

@@ -18,3 +18,6 @@ module.exports = {
     'gatsby-plugin-styled-components'
   ]
 };
+ 
+
+//NEED GATSBY-CONFIG FILE TO EFFECTIVELY ALLOW PLUGINS

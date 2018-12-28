@@ -9,7 +9,7 @@ export default function({ data }) {
 				<H2>ABOUT ME</H2>
 				<AboutMidSection>
 					<Img2
-						fluid={data.mid.childImageSharp.fluid}
+						fixed={data.mid.childImageSharp.fixed}
 						style={{ display: 'flex', justifyContent: 'flex-end' }}
 					/>
 					<AboutMidText>
@@ -53,8 +53,7 @@ export default function({ data }) {
 }
 
 const AboutSection = styled.section`
-	padding: 50px 0;
-	width: 80%;
+	padding: 3% 0;
 	margin: 0 auto;
 `;
 
@@ -66,14 +65,14 @@ const H2 = styled.h2`
 `;
 
 const AboutMidSection = styled.div`
-	display: grid;
+	display: flex;
+	width: 75%;
 	margin: 0 auto;
-	width: 80%;
-	grid-template-columns: 1fr 0.8fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
 	justify-content: space-between;
 	align-items: center;
-	grid-column-gap: 1em;
+	@media (max-width: 1023px) {
+		flex-direction: column;
+	}
 `;
 
 const Img2 = styled(Img)`
@@ -82,27 +81,39 @@ const Img2 = styled(Img)`
 	justify-content: center;
 	grid-column: 1/1;
 	& img {
-		position: none;
-		align-self: center;
 		padding: 1rem;
-		width: 500px;
+		height: 100%;
 	}
 `;
 
 const AboutMidText = styled.div`
-	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	height: 100%;
-	grid-row: 1/2;
-	grid-column: 2/3;
+	font-family: Open Sans, sans-serif;
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	line-height: 2.4rem;
+	max-height: 800px;
+	flex: 1;
+	@media (max-width: 900px) {
+	}
 `;
 
 const AboutMidSectionH2 = styled.h2`
 	font-family: Lora;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
+
+	@media (max-width: 1023px) {
+		font-size: 1rem;
+	}
 `;
 
 const AboutMidSectionP = styled.p`
 	font-family: Raleway;
+
+	@media (max-width: 1024px) {
+		font-size: 0.9rem;
+	}
 `;
