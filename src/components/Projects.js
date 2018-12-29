@@ -6,8 +6,10 @@ export default function({ data }) {
 	return (
 		<ProjectsContainer>
 			<h2>PROJECTS</h2>
+
 			<div className="project-box">
-				<ImgX fixed={data.learneryPic.childImageSharp.fixed} />
+				{/*  */}
+				<ImgX fixed={data.learneryPic.childImageSharp.fixed} /> {/* </a> */}
 				<div className="project-box-text-1">
 					<div>
 						<h3>Learnery</h3>
@@ -15,11 +17,17 @@ export default function({ data }) {
 							Learnery is an app that a fellow engineer and I designed to help
 							students pass software engineering interviews. Students are guided
 							on their quest to succeed through a carefully planned space
-							repetition algorithm.
+							repetition algorithm.{' '}
+							<a
+								className="project-link-target-1"
+								target="_blank"
+								href="https://github.com/NikolasMsomething/learnery-frontend"
+							>
+								| DEMO |
+							</a>
 						</p>
 					</div>
-
-					<div>
+					<div className="project-box-learnery-tech">
 						<h4>Tech Stack</h4>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
@@ -29,6 +37,7 @@ export default function({ data }) {
 					</div>
 				</div>
 			</div>
+
 			<div className="project-box">
 				<ImgY fixed={data.swappuyoPic.childImageSharp.fixed} />
 				<div className="project-box-text-2">
@@ -37,7 +46,14 @@ export default function({ data }) {
 						<p>
 							Swappuyo is an app that I personally built to scratch an itch I
 							have had for a while. My app lets me efficiently trade on
-							reddit.com without all of the extra social features reddit boasts.
+							reddit.com without all of the extra social features reddit boasts.{' '}
+							<a
+								className="project-link-target-2"
+								target="_blank"
+								href="https://github.com/NikolasMsomething/learnery-frontend"
+							>
+								| DEMO |
+							</a>
 						</p>
 					</div>
 
@@ -53,13 +69,21 @@ export default function({ data }) {
 			</div>
 			<div className="project-box">
 				<ImgY fixed={data.buviePic.childImageSharp.fixed} />
+
 				<div className="project-box-text-3">
 					<div>
 						<h3>Buvie</h3>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
 							sit recusandae repellendus consectetur aperiam inventore omnis
-							ullam earum praesentium.
+							ullam earum praesentium.{' '}
+							<a
+								className="project-link-target-3"
+								target="_blank"
+								href="https://github.com/NikolasMsomething/learnery-frontend"
+							>
+								| DEMO |
+							</a>
 						</p>
 					</div>
 
@@ -87,6 +111,26 @@ const ProjectsContainer = styled.section`
 		font-family: Lora;
 		text-align: center !important;
 		margin-bottom: 5%;
+	}
+
+	.project-box-learnery-tech {
+	}
+	.project-link-target-1 {
+		text-decoration: none;
+		color: #fcc72f;
+		font-weight: bold;
+	}
+
+	.project-link-target-2 {
+		text-decoration: none;
+		color: #4b5a68;
+		font-weight: bold;
+	}
+
+	.project-link-target-3 {
+		text-decoration: none;
+		color: #fbb8c5;
+		font-weight: bold;
 	}
 	.project-box {
 		display: flex;

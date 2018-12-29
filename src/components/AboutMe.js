@@ -33,13 +33,9 @@ export default function({ data }) {
 						<div>
 							<AboutMidSectionH2>What I am now</AboutMidSectionH2>
 							<AboutMidSectionP>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Laudantium optio suscipit maiores. Provident nam molestias
-								suscipit reiciendis eveniet laborum consequuntur est nesciunt
-								perspiciatis iure explicabo, eius vitae ipsam, ut ex quia eos
-								veniam accusantium! Iste odit, ut molestias magnam temporibus
-								iusto harum laboriosam nihil modi, excepturi voluptates officiis
-								veritatis dolor!
+								Now a days you will see me trying my hardest to better myself at
+								what I love doing. I'll never be too far from code or talking
+								tech.
 							</AboutMidSectionP>
 						</div>
 						<div>
@@ -51,13 +47,10 @@ export default function({ data }) {
 							<AboutMidSectionP>
 								<span className="for-fun-box">
 									<FaKeyboard />
-									Building Keyboards | <FaLaptopCode /> Learning Tech |{' '}
-									<FaGamepad />
+									Building Keyboards | <FaLaptopCode /> Studying | <FaGamepad />
 									Competing in Video Games |
 									<FaRunning /> Running |
-									<FaPlaneDeparture /> Travelling |
-									<FaLaughBeam />
-									Laughing
+									<FaPlaneDeparture /> Travelling | <FaLaughBeam /> Laughing
 								</span>
 							</AboutMidSectionP>
 						</div>
@@ -143,6 +136,7 @@ const AboutMidSectionP = styled.p`
 		font-size: 1.2rem;
 		svg {
 			margin-right: 2px;
+			margin-left: 2px;
 		}
 	}
 `;

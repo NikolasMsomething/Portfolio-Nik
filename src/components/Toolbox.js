@@ -7,41 +7,50 @@ export default function() {
 			<div className="box">
 				<h5>Toolbox</h5>
 				<p>
-					<span>Langauges and Frameworks</span>: Javascript, HTML5, CSS3,
-					jQuery, React, NodeJS, ExpressJS, MongoDB, postgreSQL, Mocha, Chai,
-					Jest
-				</p>
-				<p>
-					<span>IDE</span>: Microsoft Visual Studios
-				</p>
-				<p>
-					<span>VCS</span>: Git/Github
-				</p>
-				<p>
-					<span>PMS</span>: Trello
+					<span className="box-titles">Langauges and Frameworks</span>:
+					Javascript, HTML5, CSS3, jQuery, React, NodeJS, ExpressJS, MongoDB,
+					postgreSQL, Mocha, Chai, Jest
+					<span className="box-titles">
+						<br />
+						IDE:
+					</span>{' '}
+					Microsoft Visual Studios
+					<span className="box-titles">
+						<br />
+						VCS:
+					</span>{' '}
+					Git/Github
+					<span className="box-titles">
+						<br />
+						PMS:
+					</span>{' '}
+					Trello
 				</p>
 			</div>
 			<div className="box-2">
 				<h5>Learning</h5>
 				<p>
-					Currently: Vue.js, CSS Grid, <br />
-					Future: PWA, AWS APIs, Python, Django, Ruby, Rails
+					<span className="box-titles">Currently:</span> Vue.js, CSS Grid,{' '}
+					<br />
+					<span className="box-titles">Future:</span> PWA, AWS APIs, Python,
+					Django, Ruby, Rails
 				</p>
 			</div>
 			<div className="box">
 				<h5>Building</h5>
 				<p>
-					1 | Focusing my attention on creating an app with a fellow engineer of
-					mine that facilitates the needs of plant lovers alike.
+					<span className="box-titles">1 |</span> Focusing my attention on
+					creating an app with a fellow engineer of mine that facilitates the
+					needs of plant lovers alike.
 				</p>
 				<p>
-					{' '}
-					2 | Working on a small game that features socket.io and p2p
-					connections.{' '}
+					<span className="box-titles">2 |</span> Working on a small game that
+					features socket.io and p2p connections.
 				</p>
 				<p>
-					3 | Constantly updating and upgrading the apps I have worked on.
-					Always on the quest to better them!
+					<span className="box-titles">3 |</span> Constantly updating and
+					upgrading the apps I have worked on. Always on the quest to better
+					them!
 				</p>
 			</div>
 		</ToolBox>
@@ -53,6 +62,10 @@ const ToolBox = styled.div`
 	justify-content: space-around;
 	width: 75%;
 	margin: 0 auto;
+
+	.box-titles {
+		font-weight: bold;
+	}
 
 	@media (max-width: 1024px) {
 		flex-direction: column;
@@ -87,7 +100,7 @@ const ToolBox = styled.div`
 
 		@media (max-width: 640px) {
 			flex-direction: column;
-
+			text-align: left;
 			align-items: center;
 			width: 80%;
 		}
