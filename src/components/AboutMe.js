@@ -35,9 +35,9 @@ export default function({ data }) {
 							<div>
 								<AboutMidSectionH2>What I am now</AboutMidSectionH2>
 								<AboutMidSectionP>
-									Now a days you will see me trying my hardest to better myself
-									at what I love doing. I'll never be too far from code or
-									talking tech.
+									Nowadays you will see me trying my hardest to better myself at
+									what I love doing. I'll never be too far from code or talking
+									tech.
 								</AboutMidSectionP>
 							</div>
 							<div>
