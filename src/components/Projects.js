@@ -46,7 +46,7 @@ export default function({ data }) {
 						<p>
 							Swappuyo is an app that I personally built to scratch an itch I
 							have had for a while. My app lets me efficiently trade on
-							reddit.com without all of the extra social features reddit boasts.{' '}
+							reddit.com.{' '}
 							<a
 								className="project-link-target-2"
 								target="_blank"
