@@ -34,6 +34,8 @@ export default function() {
 					<br />
 					<span className="box-titles">Future:</span> PWA, AWS APIs, Python,
 					Django, Ruby, Rails
+					<br />
+					<span className="box-titles">Non-tech:</span> Cooking, Longboarding
 				</p>
 			</div>
 			<div className="box">
@@ -117,10 +119,9 @@ const ToolBox = styled.div`
 		background-color: #fff;
 		width: 30%;
 		height: 80%;
-
+		min-height: 60%;
 		@media (max-width: 640px) {
 			flex-direction: column;
-
 			align-items: center;
 			width: 80%;
 		}

@@ -25,8 +25,8 @@ export default function({ data }) {
 								<AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
 								<AboutMidSectionP>
 									Ever since I was young I always looked to become a top
-									contender in whatever I loved to do. I wanted to become a
-									strong fighting game player, an excellent builder, and the
+									contender in whatever I loved doing. I wanted to become a
+									strong fighting game player, an excellent tinkerer, and the
 									funniest guy around. As I got older a new passion struck a
 									chord and that passion is development. Now my sights are
 									clearly set on becoming a top tier programmer.

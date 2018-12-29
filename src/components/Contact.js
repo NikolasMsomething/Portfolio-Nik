@@ -8,7 +8,6 @@ export default function() {
 	return (
 		<Element name="contact" className="contact-scroll-to">
 			<ContactContainer>
-				<h2>CONTACT</h2>
 				<div className="contact-icons">
 					<span>
 						<a target="_blank" href="https://github.com/NikolasMsomething">
@@ -35,8 +34,8 @@ export default function() {
 }
 
 let ContactContainer = styled.section`
-	padding-top: 12%;
-	padding-bottom: 15%;
+	padding-top: 16%;
+	padding-bottom: 20%;
 
 	svg {
 		width: 4em;
