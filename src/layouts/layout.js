@@ -5,15 +5,26 @@ import { debounce } from 'lodash';
 import './layout.scss';
 import { FaGithub, FaLinkedinIn, FaCloudMoon } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
+import * as Scroll from 'react-scroll';
+import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
 const Primary = 'rgb(27, 102, 47)';
 
 const ListLink = props => (
 	<LcLi className={props.name}>
-		<LcA to={props.to}>{props.children}</LcA>
+		<LcA
+			offset={props.offset}
+			activeClass="active"
+			to={props.to}
+			spy={true}
+			smooth={true}
+		>
+			{props.children}
+		</LcA>
 	</LcLi>
 );
 
+const scroll = Scroll.animateScroll;
 //Make functions to return nested JSX, can use props effectively to pass options :D
 //Layout in which we pass props children after our layout... call this layout component in app.js and put  children inside!
 export default class extends Component {
@@ -55,19 +66,31 @@ export default class extends Component {
 		}
 	};
 
+	scrollTo = () => {
+		scroll.scrollTo(100);
+	};
+
+	scrollToTop = () => {
+		scroll.scrollToTop();
+	};
+
+	handleSetActive = to => {
+		console.log(to);
+	};
+
 	render() {
 		return (
 			<>
 				<Header className={this.state.navbar}>
-					<H1>Nikolas Melgarejo</H1>
+					<H1 onClick={this.scrollToTop}>Nikolas Melgarejo</H1>
 					<Ul>
-						<ListLink name="About" to="/About">
+						<ListLink offset={-80} name="About" to="about">
 							About Me
 						</ListLink>
-						<ListLink name="Projects" to="/Projects">
+						<ListLink offset={-80} name="Projects" to="projects">
 							Projects
 						</ListLink>
-						<ListLink name="Contact" to="/Contact">
+						<ListLink offset={-20} name="Contact" to="contact">
 							Contact
 						</ListLink>
 					</Ul>
@@ -102,6 +125,10 @@ const Header = styled.header`
 `;
 
 const Ul = styled.ul`
+
+	.active {
+		border-bottom: 1px solid #513519;
+	}
 	display: flex;
 	padding: 10px;
 	height: auto;
@@ -140,13 +167,13 @@ const LcLi = styled.li`
     color: inherit;
   };
   &{LcA} a:hover {
-	
+		cursor: pointer;
 		border-bottom: 1px solid white;
 	
   }
 `;
 
-const LcA = styled(Link)`
+const LcA = styled(ScrollLink)`
 	text-decoration: none;
 	text-transform: uppercase;
 	font-family: Lora;

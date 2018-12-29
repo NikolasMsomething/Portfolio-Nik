@@ -1,103 +1,106 @@
 import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
 export default function({ data }) {
 	return (
-		<ProjectsContainer>
-			<h2>PROJECTS</h2>
+		<Element name="projects" className="projects-scroll-to">
+			<ProjectsContainer>
+				<h2>PROJECTS</h2>
 
-			<div className="project-box">
-				{/*  */}
-				<ImgX fixed={data.learneryPic.childImageSharp.fixed} /> {/* </a> */}
-				<div className="project-box-text-1">
-					<div>
-						<h3>Learnery</h3>
-						<p>
-							Learnery is an app that a fellow engineer and I designed to help
-							students pass software engineering interviews. Students are guided
-							on their quest to succeed through a carefully planned space
-							repetition algorithm.{' '}
-							<a
-								className="project-link-target-1"
-								target="_blank"
-								href="https://github.com/NikolasMsomething/learnery-frontend"
-							>
-								| DEMO |
-							</a>
-						</p>
-					</div>
-					<div className="project-box-learnery-tech">
-						<h4>Tech Stack</h4>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
-							sit recusandae repellendus consectetur aperiam inventore omnis
-							ullam earum praesentium.
-						</p>
+				<div className="project-box">
+					{/*  */}
+					<ImgX fixed={data.learneryPic.childImageSharp.fixed} /> {/* </a> */}
+					<div className="project-box-text-1">
+						<div>
+							<h3>Learnery</h3>
+							<p>
+								Learnery is an app that a fellow engineer and I designed to help
+								students pass software engineering interviews. Students are
+								guided on their quest to succeed through a carefully planned
+								space repetition algorithm.{' '}
+								<a
+									className="project-link-target-1"
+									target="_blank"
+									href="https://github.com/NikolasMsomething/learnery-frontend"
+								>
+									| DEMO |
+								</a>
+							</p>
+						</div>
+						<div className="project-box-learnery-tech">
+							<h4>Tech Stack</h4>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+								sit recusandae repellendus consectetur aperiam inventore omnis
+								ullam earum praesentium.
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div className="project-box">
-				<ImgY fixed={data.swappuyoPic.childImageSharp.fixed} />
-				<div className="project-box-text-2">
-					<div>
-						<h3>Swappuyo</h3>
-						<p>
-							Swappuyo is an app that I personally built to scratch an itch I
-							have had for a while. My app lets me efficiently trade on
-							reddit.com.{' '}
-							<a
-								className="project-link-target-2"
-								target="_blank"
-								href="https://github.com/NikolasMsomething/learnery-frontend"
-							>
-								| DEMO |
-							</a>
-						</p>
-					</div>
+				<div className="project-box">
+					<ImgY fixed={data.swappuyoPic.childImageSharp.fixed} />
+					<div className="project-box-text-2">
+						<div>
+							<h3>Swappuyo</h3>
+							<p>
+								Swappuyo is an app that I personally built to scratch an itch I
+								have had for a while. My app lets me efficiently trade on
+								reddit.com.{' '}
+								<a
+									className="project-link-target-2"
+									target="_blank"
+									href="https://github.com/NikolasMsomething/learnery-frontend"
+								>
+									| DEMO |
+								</a>
+							</p>
+						</div>
 
-					<div>
-						<h4>Tech Stack</h4>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
-							sit recusandae repellendus consectetur aperiam inventore omnis
-							ullam earum praesentium.
-						</p>
-					</div>
-				</div>
-			</div>
-			<div className="project-box">
-				<ImgY fixed={data.buviePic.childImageSharp.fixed} />
-
-				<div className="project-box-text-3">
-					<div>
-						<h3>Buvie</h3>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
-							sit recusandae repellendus consectetur aperiam inventore omnis
-							ullam earum praesentium.{' '}
-							<a
-								className="project-link-target-3"
-								target="_blank"
-								href="https://github.com/NikolasMsomething/learnery-frontend"
-							>
-								| DEMO |
-							</a>
-						</p>
-					</div>
-
-					<div>
-						<h4>Tech Stack</h4>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
-							sit recusandae repellendus consectetur aperiam inventore omnis
-							ullam earum praesentium.
-						</p>
+						<div>
+							<h4>Tech Stack</h4>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+								sit recusandae repellendus consectetur aperiam inventore omnis
+								ullam earum praesentium.
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</ProjectsContainer>
+				<div className="project-box">
+					<ImgY fixed={data.buviePic.childImageSharp.fixed} />
+
+					<div className="project-box-text-3">
+						<div>
+							<h3>Buvie</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+								sit recusandae repellendus consectetur aperiam inventore omnis
+								ullam earum praesentium.{' '}
+								<a
+									className="project-link-target-3"
+									target="_blank"
+									href="https://github.com/NikolasMsomething/learnery-frontend"
+								>
+									| DEMO |
+								</a>
+							</p>
+						</div>
+
+						<div>
+							<h4>Tech Stack</h4>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa et
+								sit recusandae repellendus consectetur aperiam inventore omnis
+								ullam earum praesentium.
+							</p>
+						</div>
+					</div>
+				</div>
+			</ProjectsContainer>
+		</Element>
 	);
 }
 

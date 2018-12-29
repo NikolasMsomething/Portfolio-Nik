@@ -9,54 +9,71 @@ import {
 	FaRunning,
 	FaPlaneDeparture
 } from 'react-icons/fa';
+import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
 export default function({ data }) {
 	return (
 		<>
-			<AboutSection>
-				<H2>ABOUT ME</H2>
-				<AboutMidSection>
-					<Img2 fluid={data.mid.childImageSharp.fluid} />
+			<Element name="about" className="about-scroll-to">
+				<AboutSection>
+					<H2>ABOUT ME</H2>
+					<AboutMidSection>
+						<Img2 fluid={data.mid.childImageSharp.fluid} />
 
-					<AboutMidText>
-						<div>
-							<AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
-							<AboutMidSectionP>
-								Ever since I was young I always looked to become a top contender
-								in whatever I loved to do. I wanted to become a strong fighting
-								game player, an excellent builder, and the funniest guy around.
-								As I got older a new passion struck a chord and that passion is
-								development. Now my sights are clearly set on becoming a top
-								tier programmer.
-							</AboutMidSectionP>
-						</div>
-						<div>
-							<AboutMidSectionH2>What I am now</AboutMidSectionH2>
-							<AboutMidSectionP>
-								Now a days you will see me trying my hardest to better myself at
-								what I love doing. I'll never be too far from code or talking
-								tech.
-							</AboutMidSectionP>
-						</div>
-						<div>
-							<AboutMidSectionH2>
-								<span className="for-fun-title">
-									Life outside of Development?
-								</span>
-							</AboutMidSectionH2>
-							<AboutMidSectionP>
-								<span className="for-fun-box">
-									<FaKeyboard />
-									Building Keyboards | <FaLaptopCode /> Studying | <FaGamepad />
-									Competing in Video Games |
-									<FaRunning /> Running |
-									<FaPlaneDeparture /> Travelling | <FaLaughBeam /> Laughing
-								</span>
-							</AboutMidSectionP>
-						</div>
-					</AboutMidText>
-				</AboutMidSection>
-			</AboutSection>
+						<AboutMidText>
+							<div>
+								<AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
+								<AboutMidSectionP>
+									Ever since I was young I always looked to become a top
+									contender in whatever I loved to do. I wanted to become a
+									strong fighting game player, an excellent builder, and the
+									funniest guy around. As I got older a new passion struck a
+									chord and that passion is development. Now my sights are
+									clearly set on becoming a top tier programmer.
+								</AboutMidSectionP>
+							</div>
+							<div>
+								<AboutMidSectionH2>What I am now</AboutMidSectionH2>
+								<AboutMidSectionP>
+									Now a days you will see me trying my hardest to better myself
+									at what I love doing. I'll never be too far from code or
+									talking tech.
+								</AboutMidSectionP>
+							</div>
+							<div>
+								<AboutMidSectionH2>
+									<span className="for-fun-title">
+										Life outside of Development?
+									</span>
+								</AboutMidSectionH2>
+								<AboutMidSectionP>
+									<div className="for-fun-box">
+										<div>
+											<FaLaptopCode /> Studying |
+										</div>
+										<div>
+											<FaKeyboard /> Building Keyboards |
+										</div>
+
+										<div>
+											<FaGamepad /> Competing in Video Games |
+										</div>
+										<div>
+											<FaRunning /> Running |
+										</div>
+										<div>
+											<FaPlaneDeparture /> Travelling |
+										</div>
+										<div>
+											<FaLaughBeam /> Laughing |
+										</div>
+									</div>
+								</AboutMidSectionP>
+							</div>
+						</AboutMidText>
+					</AboutMidSection>
+				</AboutSection>
+			</Element>
 		</>
 	);
 }
@@ -133,6 +150,9 @@ const AboutMidSectionP = styled.p`
 	}
 
 	.for-fun-box {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		font-size: 1.2rem;
 		svg {
 			margin-right: 2px;
