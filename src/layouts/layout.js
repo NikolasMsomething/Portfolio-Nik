@@ -80,7 +80,7 @@ export default class extends Component {
 							<FaCloudMoon />
 						</span>
 					</h3>
-					<h4>Coded by Nikolas</h4>
+					<h4>Nikolas Melgarejo</h4>
 				</Footer>
 			</>
 		);

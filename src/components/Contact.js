@@ -32,8 +32,8 @@ export default function() {
 }
 
 let ContactContainer = styled.section`
-	padding-bottom: 40px;
-	padding-top: 1%;
+	padding-bottom: 6%;
+	padding-top: 3%;
 	svg {
 		width: 4em;
 		height: 4em;

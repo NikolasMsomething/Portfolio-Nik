@@ -49,7 +49,7 @@ const Main = styled.div`
 	margin-right: -50%;
 	z-index: 94;
 	h1 {
-		font-size: 4rem;
+		font-size: 3.6rem;
 		font-weight: 400;
 		color: white;
 		font-family: Lora;
@@ -58,20 +58,21 @@ const Main = styled.div`
 
 	p {
 		font-family: Lora;
-		font-size: 3rem;
+		font-size: 2.8rem;
 		color: white;
 		cursor: pointer;
 		margin-top: 10px;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 780px) {
 		h1 {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			color: white;
 			font-family: Lora;
 		}
 
 		p {
+			font-size: 1rem;
 		}
 	}
 `;

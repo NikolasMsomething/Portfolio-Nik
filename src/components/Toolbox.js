@@ -7,36 +7,42 @@ export default function() {
 			<div className="box">
 				<h5>Toolbox</h5>
 				<p>
-					Langauges and Frameworks: Javascript, HTML5, CSS3, jQuery, Bootstrap,
-					NodeJS, ExpressJS, MongoDB
+					<span>Langauges and Frameworks</span>: Javascript, HTML5, CSS3,
+					jQuery, React, NodeJS, ExpressJS, MongoDB, postgreSQL, Mocha, Chai,
+					Jest
 				</p>
-				<p>VCS: Git/Github</p>
+				<p>
+					<span>IDE</span>: Microsoft Visual Studios
+				</p>
+				<p>
+					<span>VCS</span>: Git/Github
+				</p>
+				<p>
+					<span>PMS</span>: Trello
+				</p>
 			</div>
 			<div className="box-2">
-				<h5>Toolbox</h5>
+				<h5>Learning</h5>
 				<p>
-					Langauges and Frameworks: Javascript, HTML5, CSS3, jQuery, Bootstrap,
-					NodeJS, ExpressJS, MongoDB
+					Currently: Vue.js, CSS Grid, <br />
+					Future: PWA, AWS APIs, Python, Django, Ruby, Rails
 				</p>
-				<p>VCS: Git/Github</p>
-				<p>VCS: Git/Github</p>
-				<p>VCS: Git/Github</p>
 			</div>
 			<div className="box">
-				<h5>Toolbox</h5>
+				<h5>Building</h5>
 				<p>
-					Langauges and Frameworks: Javascript, HTML5, CSS3, jQuery, Bootstrap,
-					NodeJS, ExpressJS, MongoDB
+					1 | Focusing my attention on creating an app with a fellow engineer of
+					mine that facilitates the needs of plant lovers alike.
 				</p>
 				<p>
-					Langauges and Frameworks: Javascript, HTML5, CSS3, jQuery, Bootstrap,
-					NodeJS, ExpressJS, MongoDB
+					{' '}
+					2 | Working on a small game that features socket.io and p2p
+					connections.{' '}
 				</p>
 				<p>
-					Langauges and Frameworks: Javascript, HTML5, CSS3, jQuery, Bootstrap,
-					NodeJS, ExpressJS, MongoDB
+					3 | Constantly updating and upgrading the apps I have worked on.
+					Always on the quest to better them!
 				</p>
-				<p>VCS: Git/Github</p>
 			</div>
 		</ToolBox>
 	);

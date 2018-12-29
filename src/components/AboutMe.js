@@ -1,6 +1,14 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import {
+	FaGamepad,
+	FaKeyboard,
+	FaLaughBeam,
+	FaLaptopCode,
+	FaRunning,
+	FaPlaneDeparture
+} from 'react-icons/fa';
 
 export default function({ data }) {
 	return (
@@ -14,7 +22,12 @@ export default function({ data }) {
 						<div>
 							<AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
 							<AboutMidSectionP>
-								Ever since I was young I always looked to become{' '}
+								Ever since I was young I always looked to become a top contender
+								in whatever I loved to do. I wanted to become a strong fighting
+								game player, an excellent builder, and the funniest guy around.
+								As I got older a new passion struck a chord and that passion is
+								development. Now my sights are clearly set on becoming a top
+								tier programmer.
 							</AboutMidSectionP>
 						</div>
 						<div>
@@ -31,16 +44,21 @@ export default function({ data }) {
 						</div>
 						<div>
 							<AboutMidSectionH2>
-								Life outside of Development?
+								<span className="for-fun-title">
+									Life outside of Development?
+								</span>
 							</AboutMidSectionH2>
 							<AboutMidSectionP>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Laudantium optio suscipit maiores. Provident nam molestias
-								suscipit reiciendis eveniet laborum consequuntur est nesciunt
-								perspiciatis iure explicabo, eius vitae ipsam, ut ex quia eos
-								veniam accusantium! Iste odit, ut molestias magnam temporibus
-								iusto harum laboriosam nihil modi, excepturi voluptates officiis
-								veritatis dolor!
+								<span className="for-fun-box">
+									<FaKeyboard />
+									Building Keyboards | <FaLaptopCode /> Learning Tech |{' '}
+									<FaGamepad />
+									Competing in Video Games |
+									<FaRunning /> Running |
+									<FaPlaneDeparture /> Travelling |
+									<FaLaughBeam />
+									Laughing
+								</span>
 							</AboutMidSectionP>
 						</div>
 					</AboutMidText>
@@ -97,7 +115,7 @@ const AboutMidText = styled.div`
 	line-height: 2.4rem;
 	max-height: 800px;
 	flex: 1;
-	@media (max-width: 900px) {
+	@media (max-width: 650px) {
 	}
 `;
 
@@ -115,5 +133,16 @@ const AboutMidSectionP = styled.p`
 
 	@media (max-width: 1024px) {
 		font-size: 0.9rem;
+	}
+
+	.for-fun-title {
+		font-size: 1.4rem;
+	}
+
+	.for-fun-box {
+		font-size: 1.2rem;
+		svg {
+			margin-right: 2px;
+		}
 	}
 `;

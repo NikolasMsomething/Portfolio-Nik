@@ -108,7 +108,7 @@ const ProjectsContainer = styled.section`
 			flex: 4;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-evenly;
+			justify-content: space-around;
 			p {
 				font-family: Raleway;
 				padding-left: 2%;
@@ -120,7 +120,7 @@ const ProjectsContainer = styled.section`
 			flex: 4;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-evenly;
+			justify-content: space-around;
 			p {
 				font-family: Raleway;
 				padding-left: 2%;
