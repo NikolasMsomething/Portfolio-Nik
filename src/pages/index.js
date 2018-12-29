@@ -39,7 +39,17 @@ export const screenshot = graphql`
 export const midPic = graphql`
 	fragment midPic on File {
 		childImageSharp {
-			fixed(height: 600, width: 600) {
+			fluid(maxHeight: 632, maxWidth: 670) {
+				...GatsbyImageSharpFluid
+			}
+		}
+	}
+`;
+
+export const midPicX = graphql`
+	fragment midPicX on File {
+		childImageSharp {
+			fixed(height: 632, width: 670) {
 				...GatsbyImageSharpFixed
 			}
 		}

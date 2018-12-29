@@ -48,6 +48,12 @@ const ToolBox = styled.div`
 	width: 75%;
 	margin: 0 auto;
 
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+
 	h5 {
 		margin-bottom: 0.5rem;
 		font-family: Lora;
@@ -72,7 +78,13 @@ const ToolBox = styled.div`
 		box-sizing: border-box;
 		background-color: #fff;
 		width: 30%;
-		max-height: 382px;
+
+		@media (max-width: 640px) {
+			flex-direction: column;
+
+			align-items: center;
+			width: 80%;
+		}
 	}
 	.box-2 {
 		display: flex;
@@ -86,5 +98,12 @@ const ToolBox = styled.div`
 		background-color: #fff;
 		width: 30%;
 		height: 80%;
+
+		@media (max-width: 640px) {
+			flex-direction: column;
+
+			align-items: center;
+			width: 80%;
+		}
 	}
 `;

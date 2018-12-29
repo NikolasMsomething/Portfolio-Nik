@@ -22,7 +22,7 @@ export default function() {
 					</a>
 				</span>
 				<span>
-					<a target="_blank" href="https://github.com/NikolasMsomething">
+					<a target="_blank" href="https://nikolasmlgrj@gmail.com">
 						<IoIosMail />
 					</a>
 				</span>

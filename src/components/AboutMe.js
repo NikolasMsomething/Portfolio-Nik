@@ -8,10 +8,8 @@ export default function({ data }) {
 			<AboutSection>
 				<H2>ABOUT ME</H2>
 				<AboutMidSection>
-					<Img2
-						fixed={data.mid.childImageSharp.fixed}
-						style={{ display: 'flex', justifyContent: 'flex-end' }}
-					/>
+					<Img2 fluid={data.mid.childImageSharp.fluid} />
+
 					<AboutMidText>
 						<div>
 							<AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
@@ -70,19 +68,21 @@ const AboutMidSection = styled.div`
 	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
-	@media (max-width: 1023px) {
+	@media (max-width: 1024px) {
 		flex-direction: column;
 	}
 `;
 
 const Img2 = styled(Img)`
 	flex: 1;
-	display: block;
 	justify-content: center;
 	grid-column: 1/1;
-	& img {
+
+	img {
 		padding: 1rem;
-		height: 100%;
+		@media (max-width: 1024px) {
+			display: none;
+		}
 	}
 `;
 
@@ -105,7 +105,7 @@ const AboutMidSectionH2 = styled.h2`
 	font-family: Lora;
 	font-size: 1.5rem;
 
-	@media (max-width: 1023px) {
+	@media (max-width: 1024px) {
 		font-size: 1rem;
 	}
 `;
