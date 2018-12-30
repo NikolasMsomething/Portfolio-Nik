@@ -1,53 +1,53 @@
 .navbar-top {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
-	position: fixed;
-	top: 0;
-	z-index: 99;
-	background-color: transparent;
-	font-size: 16px;
-	font-weight: 500;
-	padding: 10px;
-	transition: all 1s ease;
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	border-bottom: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  border-bottom: none;
 
-	h1 {
-		cursor: pointer;
-	}
+  h1 {
+    cursor: pointer;
+  }
 
-	&-off {
-		background-color: white;
-		transition: all 1s ease;
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		-ms-transition: all 1s ease;
-		border-bottom: 2px solid rgb(156, 156, 156);
-		& ul li a {
-			color: #513519;
+  &-off {
+    background-color: white;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    border-bottom: 2px solid rgb(156, 156, 156);
+    & ul li a {
+      color: #513519;
 
-			transition: all 2s ease;
-			-webkit-transition: all 2s ease;
-			-moz-transition: all 2s ease;
-			-o-transition: all 2s ease;
-			-ms-transition: all 2s ease;
-			border-bottom: none;
-		}
-		& h1 {
-			color: #513519;
-			transition: all 2s ease;
-			-webkit-transition: all 2s ease;
-			-moz-transition: all 2s ease;
-			-o-transition: all 2s ease;
-			-ms-transition: all 2s ease;
-			border-bottom: none;
-		}
-	}
+      transition: all 2s ease;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      border-bottom: none;
+    }
+    & h1 {
+      color: #513519;
+      transition: all 2s ease;
+      -webkit-transition: all 2s ease;
+      -moz-transition: all 2s ease;
+      -o-transition: all 2s ease;
+      -ms-transition: all 2s ease;
+      border-bottom: none;
+    }
+  }
 }

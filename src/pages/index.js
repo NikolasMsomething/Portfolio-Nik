@@ -10,100 +10,100 @@ import Contact from '../components/Contact';
 import Project from '../components/Projects';
 
 export default ({ data }) => (
-	<>
-		<Layout>
-			<Hero data={data} />
-			<AboutMe data={data} />
-			<ToolBox />
-			<Project data={data} />
-			<Contact />
-		</Layout>
-	</>
+  <>
+    <Layout>
+      <Hero data={data} />
+      <AboutMe data={data} />
+      <ToolBox />
+      <Project data={data} />
+      <Contact />
+    </Layout>
+  </>
 );
 
 const GodContainer = styled.div`
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 `;
 
 export const screenshot = graphql`
-	fragment screenshot on File {
-		childImageSharp {
-			fluid(maxWidth: 2160) {
-				...GatsbyImageSharpFluid
-			}
-		}
-	}
+  fragment screenshot on File {
+    childImageSharp {
+      fluid(maxWidth: 2160) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 `;
 
 export const midPic = graphql`
-	fragment midPic on File {
-		childImageSharp {
-			fluid(maxWidth: 420) {
-				...GatsbyImageSharpFluid
-			}
-		}
-	}
+  fragment midPic on File {
+    childImageSharp {
+      fluid(maxWidth: 420) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 `;
 
 export const midPicX = graphql`
-	fragment midPicX on File {
-		childImageSharp {
-			fixed(height: 632, width: 670) {
-				...GatsbyImageSharpFixed
-			}
-		}
-	}
+  fragment midPicX on File {
+    childImageSharp {
+      fixed(height: 632, width: 670) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 `;
 
 export const projectPic = graphql`
-	fragment projectPic on File {
-		childImageSharp {
-			fixed(width: 380) {
-				...GatsbyImageSharpFixed
-			}
-		}
-	}
+  fragment projectPic on File {
+    childImageSharp {
+      fixed(width: 380) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 `;
 
 export const swappuyoPicX = graphql`
-	fragment swappuyoPicX on File {
-		childImageSharp {
-			fixed(width: 340) {
-				...GatsbyImageSharpFixed
-			}
-		}
-	}
+  fragment swappuyoPicX on File {
+    childImageSharp {
+      fixed(width: 340) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 `;
 
 export const buviePicX = graphql`
-	fragment buviePicX on File {
-		childImageSharp {
-			fixed(width: 340) {
-				...GatsbyImageSharpFixed
-			}
-		}
-	}
+  fragment buviePicX on File {
+    childImageSharp {
+      fixed(width: 340) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 `;
 
 export const pageQuery = graphql`
-	query {
-		hero: file(relativePath: { eq: "screenshots/autumn-cold-daylight.jpg" }) {
-			...screenshot
-		}
-		mid: file(relativePath: { eq: "screenshots/hero.jpg" }) {
-			...midPic
-		}
-		learneryPic: file(relativePath: { eq: "screenshots/learnery.png" }) {
-			...projectPic
-		}
-		swappuyoPic: file(relativePath: { eq: "screenshots/swappuyo.png" }) {
-			...swappuyoPicX
-		}
-		buviePic: file(relativePath: { eq: "screenshots/buvie-landing.png" }) {
-			...buviePicX
-		}
-	}
+  query {
+    hero: file(relativePath: { eq: "screenshots/autumn-cold-daylight.jpg" }) {
+      ...screenshot
+    }
+    mid: file(relativePath: { eq: "screenshots/hero.jpg" }) {
+      ...midPic
+    }
+    learneryPic: file(relativePath: { eq: "screenshots/learnery.png" }) {
+      ...projectPic
+    }
+    swappuyoPic: file(relativePath: { eq: "screenshots/swappuyo.png" }) {
+      ...swappuyoPicX
+    }
+    buviePic: file(relativePath: { eq: "screenshots/buvie-landing.png" }) {
+      ...buviePicX
+    }
+  }
 `;
 
 // queries the image

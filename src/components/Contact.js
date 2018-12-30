@@ -5,57 +5,57 @@ import { IoIosMail } from 'react-icons/io';
 import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
 export default function() {
-	return (
-		<Element name="contact" className="contact-scroll-to">
-			<ContactContainer>
-				<div className="contact-icons">
-					<span>
-						<a target="_blank" href="https://github.com/NikolasMsomething">
-							<FaGithub />
-						</a>
-					</span>
-					<span>
-						<a
-							target="_blank"
-							href="https://www.linkedin.com/in/nikolas-melgarejo/"
-						>
-							<FaLinkedinIn />
-						</a>
-					</span>
-					<span>
-						<a target="_blank" href="https://nikolasmlgrj@gmail.com">
-							<IoIosMail />
-						</a>
-					</span>
-				</div>
-			</ContactContainer>
-		</Element>
-	);
+  return (
+    <Element name="contact" className="contact-scroll-to">
+      <ContactContainer>
+        <div className="contact-icons">
+          <span>
+            <a target="_blank" href="https://github.com/NikolasMsomething">
+              <FaGithub />
+            </a>
+          </span>
+          <span>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/nikolas-melgarejo/"
+            >
+              <FaLinkedinIn />
+            </a>
+          </span>
+          <span>
+            <a target="_blank" href="https://nikolasmlgrj@gmail.com">
+              <IoIosMail />
+            </a>
+          </span>
+        </div>
+      </ContactContainer>
+    </Element>
+  );
 }
 
 let ContactContainer = styled.section`
-	padding-top: 16%;
-	padding-bottom: 20%;
+  padding-top: 16%;
+  padding-bottom: 20%;
 
-	svg {
-		width: 4em;
-		height: 4em;
-		color: #513519;
-		&:hover {
-			color: #337ab7;
-		}
-	}
+  svg {
+    width: 4em;
+    height: 4em;
+    color: #513519;
+    &:hover {
+      color: #337ab7;
+    }
+  }
 
-	h2 {
-		font-size: 40px;
-		font-family: Lora;
-		text-align: center !important;
-		margin-bottom: 5%;
-	}
+  h2 {
+    font-size: 40px;
+    font-family: Lora;
+    text-align: center !important;
+    margin-bottom: 5%;
+  }
 
-	.contact-icons {
-		display: flex;
-		justify-content: space-around;
-		padding: 1%;
-	}
+  .contact-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+  }
 `;
