@@ -9,7 +9,7 @@ export default function Hero({ data }) {
         <div className="overlay" />
         <ImgX fluid={data.hero.childImageSharp.fluid} className="hero-img" />
         <Main className="hello">
-          <h1>NIKOLAS MELGAREJO </h1>
+          <h1>Nikolas Melgarejo</h1>
           <p>Full-Stack Web Developer</p>
         </Main>
       </HeroDiv>

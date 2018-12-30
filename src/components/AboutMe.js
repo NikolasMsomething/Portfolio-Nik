@@ -28,16 +28,17 @@ export default function({ data }) {
                   contender in whatever I loved doing. I wanted to become a
                   strong fighting game player, an excellent tinkerer, and the
                   funniest guy around. As I got older I found a new passion that
-                  brings. Now my sights are clearly set on becoming a top tier
-                  programmer.
+                  brings challenge and critical thinking. I believe programming
+                  brings the best out of me and I'm ever grateful for that.
                 </AboutMidSectionP>
               </div>
               <div>
                 <AboutMidSectionH2>What I am now</AboutMidSectionH2>
                 <AboutMidSectionP>
-                  Nowadays you will see me trying my hardest to better myself at
-                  what I love doing. I'll never be too far from code or talking
-                  tech.
+                  I am currently a Full-Stack Web Developer available to the
+                  NYC/Philadelphia area. Nowadays you'll see me studying hard
+                  and practicing to keep myself sharp. Find me in a coffee shop
+                  near you!
                 </AboutMidSectionP>
               </div>
               <div>

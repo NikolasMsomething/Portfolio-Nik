@@ -82,13 +82,15 @@ export default function({ data }) {
               <h3>Buvie</h3>
               <div className="project-box-text-box">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  et sit recusandae repellendus consectetur aperiam inventore
-                  omnis ullam earum praesentium.{' '}
+                  Buvie is an app created on the basis of finding people who
+                  love the same movies as you. Our app allows users to connect
+                  with people all over the world who love the same movies as
+                  them and set appropriate times (through conversation) to
+                  either watch a movie locally or through the net.{' '}
                   <a
                     className="project-link-target-3"
                     target="_blank"
-                    href="https://github.com/NikolasMsomething/learnery-frontend"
+                    href="https://buvie.netlify.com/#demo"
                   >
                     | DEMO |
                   </a>
