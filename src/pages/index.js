@@ -92,7 +92,7 @@ export const pageQuery = graphql`
       ...screenshot
     }
     mid: file(relativePath: { eq: "screenshots/hero.jpg" }) {
-      ...midPic
+      ...midPicX
     }
     learneryPic: file(relativePath: { eq: "screenshots/learnery.png" }) {
       ...projectPic

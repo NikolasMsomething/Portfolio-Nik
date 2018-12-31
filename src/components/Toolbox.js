@@ -64,6 +64,7 @@ const ToolBox = styled.div`
   justify-content: space-around;
   width: 75%;
   margin: 0 auto;
+  letter-spacing: 0.6px;
 
   .box-titles {
     font-weight: bold;
@@ -100,11 +101,11 @@ const ToolBox = styled.div`
     background-color: #fff;
     width: 30%;
 
-    @media (max-width: 640px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
       text-align: left;
       align-items: center;
-      width: 80%;
+      width: 65%;
     }
   }
   .box-2 {
@@ -120,10 +121,11 @@ const ToolBox = styled.div`
     width: 30%;
     height: 80%;
     min-height: 60%;
-    @media (max-width: 640px) {
+    @media (max-width: 1024px) {
       flex-direction: column;
+      text-align: left;
       align-items: center;
-      width: 80%;
+      width: 65%;
     }
   }
 `;

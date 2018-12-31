@@ -122,6 +122,9 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   z-index: 100;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Ul = styled.ul`
@@ -146,6 +149,11 @@ const Ul = styled.ul`
 		text-align: left;
   	};
 	flex: 1;
+
+	@media(max-width: 768px) {
+		display: none;
+	}
+	
 `;
 
 const H1 = styled.h1`

@@ -18,10 +18,10 @@ export default function({ data }) {
         <AboutSection>
           <H2>ABOUT ME</H2>
           <AboutMidSection>
-            <Img2 fluid={data.mid.childImageSharp.fluid} />
+            <Img2 fixed={data.mid.childImageSharp.fixed} />
 
             <AboutMidText>
-              <div>
+              <div className="about-mid-section-div">
                 <AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
                 <AboutMidSectionP>
                   Ever since I was young I always looked to become a top
@@ -32,7 +32,7 @@ export default function({ data }) {
                   brings the best out of me and I'm ever grateful for that.
                 </AboutMidSectionP>
               </div>
-              <div>
+              <div className="about-mid-section-div">
                 <AboutMidSectionH2>What I am now</AboutMidSectionH2>
                 <AboutMidSectionP>
                   I am currently a Full-Stack Web Developer available to the
@@ -89,6 +89,10 @@ const H2 = styled.h2`
   font-family: Lora;
   text-align: center !important;
   margin-bottom: 5%;
+
+  @media (max-width: 450px) {
+    font-size: 30px;
+  }
 `;
 
 const AboutMidSection = styled.div`
@@ -106,12 +110,17 @@ const Img2 = styled(Img)`
   flex: 1;
   justify-content: center;
   grid-column: 1/1;
+  @media (max-width: 1024px) {
+    width: 500px !important;
+    height: 500px !important;
+  }
+
+  @media (max-width: 650px) {
+    display: none !important;
+  }
 
   img {
     padding: 1rem;
-    @media (max-width: 1024px) {
-      display: none;
-    }
   }
 `;
 
@@ -124,9 +133,11 @@ const AboutMidText = styled.div`
   margin-bottom: 20px;
   margin-left: 20px;
   line-height: 2.4rem;
-  max-height: 800px;
+
   flex: 1;
-  @media (max-width: 650px) {
+  letter-spacing: 0.6px;
+  .about-mid-section-div {
+    padding: 1%;
   }
 `;
 
@@ -139,11 +150,14 @@ const AboutMidSectionH2 = styled.h2`
   }
 `;
 
-const AboutMidSectionP = styled.p`
+const AboutMidSectionP = styled.div`
   font-family: Raleway;
 
   @media (max-width: 1024px) {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 450px) {
   }
 
   .for-fun-title {
@@ -158,6 +172,9 @@ const AboutMidSectionP = styled.p`
     svg {
       margin-right: 2px;
       margin-left: 2px;
+    }
+    @media (max-width: 450px) {
+      font-size: 0.8rem;
     }
   }
 `;

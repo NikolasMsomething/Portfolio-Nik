@@ -118,6 +118,7 @@ const ProjectsContainer = styled.section`
   background-color: #f6f6f6;
   padding-bottom: 3%;
   padding-top: 3%;
+  letter-spacing: 0.6px;
 
   h2 {
     font-size: 40px;
@@ -241,6 +242,15 @@ const ImgX = styled(Img)`
   margin-right: 2px;
   min-width: 380px;
   box-shadow: 0px 2px 22px 4px rgba(0, 0, 0, 0);
+  @media (max-width: 450px) {
+    display: flex !important;
+    justify-content: center;
+    img {
+      max-width: 200px !important;
+      height: 200px !important;
+      align-self: center;
+    }
+  }
 `;
 
 const ImgY = styled(Img)`

@@ -57,5 +57,7 @@ let ContactContainer = styled.section`
     display: flex;
     justify-content: space-around;
     padding: 1%;
+    width: 75%;
+    margin: auto;
   }
 `;
