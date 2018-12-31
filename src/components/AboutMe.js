@@ -77,7 +77,7 @@ export default function({ data }) {
       </Element>
     </>
   );
-}
+} //hello
 
 const AboutSection = styled.section`
   padding: 3% 0;
