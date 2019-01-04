@@ -33,7 +33,7 @@ export default function({ data }) {
                 </AboutMidSectionP>
               </div>
               <div className="about-mid-section-div">
-                <AboutMidSectionH2>What I am now</AboutMidSectionH2>
+                <AboutMidSectionH2>What I am now.</AboutMidSectionH2>
                 <AboutMidSectionP>
                   I am currently a Full-Stack Web Developer available to the
                   NYC/Philadelphia area. Nowadays you'll see me studying hard
