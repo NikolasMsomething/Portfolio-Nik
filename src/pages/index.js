@@ -60,7 +60,7 @@ export const projectPic = graphql`
   fragment projectPic on File {
     childImageSharp {
       fixed(width: 380) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_noBase64
       }
     }
   }
@@ -70,7 +70,7 @@ export const swappuyoPicX = graphql`
   fragment swappuyoPicX on File {
     childImageSharp {
       fixed(width: 340) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_noBase64
       }
     }
   }
@@ -80,7 +80,7 @@ export const buviePicX = graphql`
   fragment buviePicX on File {
     childImageSharp {
       fluid(maxWidth: 340) {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_noBase64
       }
     }
   }
