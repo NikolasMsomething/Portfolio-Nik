@@ -64,15 +64,27 @@ const Main = styled.div`
     margin-top: 10px;
   }
 
-  @media (max-width: 780px) {
+  @media (max-width: 768px) {
     h1 {
-      font-size: 1.8rem;
+      font-size: 2.3rem;
       color: white;
       font-family: Lora;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.2rem;
+      color: white;
+      font-family: Lora;
+    }
+
+    p {
+      font-size: 1.3rem;
     }
   }
 `;

@@ -112,7 +112,7 @@ export default class extends Component {
           <H1 onClick={this.scrollToTop}>Nikolas Melgarejo</H1>
           <Ul>
             <ListLink offset={-80} name="About" to="about">
-              About Me
+              About
             </ListLink>
             <ListLink offset={-80} name="Projects" to="projects">
               Projects

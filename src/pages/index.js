@@ -79,12 +79,22 @@ export const swappuyoPicX = graphql`
 export const buviePicX = graphql`
   fragment buviePicX on File {
     childImageSharp {
-      fixed(width: 340) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 340) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
 `;
+
+// export const buviePicSmall = graphql`
+//   fragment buviePicX on File {
+//     childImageSharp {
+//       fixed(width: 280) {
+//         ...GatsbyImageSharpFixed
+//       }
+//     }
+//   }
+// `;
 
 export const pageQuery = graphql`
   query {

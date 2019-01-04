@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
+let imgToDisplay;
+
 export default function({ data }) {
   return (
     <Element name="projects" className="projects-scroll-to">
@@ -19,14 +21,16 @@ export default function({ data }) {
                 Learnery is an app that a fellow engineer and I designed to help
                 students pass software engineering interviews. Students are
                 guided on their quest to succeed through a carefully planned
-                space repetition algorithm.{' '}
-                <a
-                  className="project-link-target-1"
-                  target="_blank"
-                  href="https://github.com/NikolasMsomething/learnery-frontend"
-                >
-                  | DEMO |
-                </a>
+                space repetition algorithm. <br />
+                <span className="demo">
+                  <a
+                    className="project-link-target-1"
+                    target="_blank"
+                    href="https://github.com/NikolasMsomething/learnery-frontend"
+                  >
+                    | DEMO |
+                  </a>
+                </span>
               </p>
             </div>
             <div className="project-box-learnery-tech">
@@ -51,7 +55,7 @@ export default function({ data }) {
                 Swappuyo is an app that I personally built to scratch an itch I
                 have had for a while. My app lets me efficiently trade on
                 reddit.com. without all of reddit's extra features I wouldn't be
-                needing.{' '}
+                needing. <br />
                 <a
                   className="project-link-target-2"
                   target="_blank"
@@ -75,7 +79,7 @@ export default function({ data }) {
           </div>
         </div>
         <div className="project-box">
-          <ImgY fixed={data.buviePic.childImageSharp.fixed} />
+          <ImgW fluid={data.buviePic.childImageSharp.fluid} />
 
           <div className="project-box-text-3">
             <div>
@@ -86,7 +90,7 @@ export default function({ data }) {
                   love the same movies as you. Our app allows users to connect
                   with people all over the world who love the same movies as
                   them and set appropriate times (through conversation) to
-                  either watch a movie locally or through the net.{' '}
+                  either watch a movie locally or through the net. <br />
                   <a
                     className="project-link-target-3"
                     target="_blank"
@@ -127,7 +131,8 @@ const ProjectsContainer = styled.section`
     margin-bottom: 5%;
   }
 
-  .project-box-learnery-tech {
+  .demo {
+    text-align: right;
   }
 
   .tech-stack-box {
@@ -142,6 +147,7 @@ const ProjectsContainer = styled.section`
     text-decoration: none;
     color: #fcc72f;
     font-weight: bold;
+    text-align: right;
   }
 
   .project-link-target-2 {
@@ -155,6 +161,7 @@ const ProjectsContainer = styled.section`
     color: #fbb8c5;
     font-weight: bold;
   }
+
   .project-box {
     display: flex;
     justify-content: space-around;
@@ -233,32 +240,229 @@ const ProjectsContainer = styled.section`
       font-size: 1.5rem;
     }
   }
+  @media (max-width: 1024px) {
+    .project-box {
+      margin: 5% auto;
+    }
+
+    .project-box-text-1 {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      p {
+        font-family: Raleway;
+        padding-left: 2%;
+      }
+      padding: 2% 0;
+      border-top: 2px solid #ffca32;
+      border-left: medium none white !important;
+    }
+
+    .project-box-text-2 {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      p {
+        font-family: Raleway;
+        padding-left: 2%;
+      }
+      padding: 2% 0;
+      margin-top: 1.8%;
+      border-top: 2px solid #4b5a68;
+      border-left: medium none white !important;
+    }
+
+    .project-box-text-3 {
+      flex: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      p {
+        font-family: Raleway;
+        padding-left: 2%;
+      }
+      padding: 2% 0;
+      margin-top: 1.8%;
+      border-top: 2px solid #fbb8c5;
+      border-left: medium none white !important;
+    }
+  }
 `;
 
 const ImgX = styled(Img)`
-  flex: 1;
   margin-left: 2%;
   max-height: 381px;
   margin-right: 2px;
-  min-width: 380px;
+  min-width: 320px;
+  max-width: 348px;
   box-shadow: 0px 2px 22px 4px rgba(0, 0, 0, 0);
-  @media (max-width: 450px) {
-    display: flex !important;
+  overflow: hidden !important;
+
+  @media (max-width: 480px) {
+    .tech-stack-box img {
+      flex: 33%;
+      display: block;
+    }
     justify-content: center;
-    img {
-      max-width: 200px !important;
-      height: 200px !important;
-      align-self: center;
+    max-width: 320px;
+    picture img {
+      object-fit: contain !important;
+      width: 270px !important;
+      height: 300px !important;
+      margin-left: 25px !important;
+      margin-top: -25px !important;
+    }
+
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
+    }
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+    .tech-stack-box img {
+      flex: 33%;
+    }
+    picture img {
+      object-fit: contain !important;
+      width: 220px !important;
+      height: 320px !important;
+      margin-left: 53px !important;
+      margin-top: -25px !important;
+    }
+
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
     }
   }
 `;
 
 const ImgY = styled(Img)`
   flex: 1;
-  min-width: 350px;
+  min-width: 320px;
   max-height: 381px;
   margin-left: 2%;
   margin-right: 30px;
+  overflow: hidden !important;
 
-  box-shadow: 0px 2px 22px 4px rgba(0, 0, 0, 0.25);
+  img {
+    object-fit: contain !important;
+  }
+
+  @media (max-width: 1024px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media (max-width: 480px) {
+    .tech-stack-box img {
+      flex: 33%;
+    }
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
+    }
+
+    picture img {
+      object-fit: contain !important;
+
+      height: 300px !important;
+
+      margin-top: -25px !important;
+    }
+
+    /* picture {
+      height: 200px !important;
+    } */
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+    .tech-stack-box img {
+      flex: 33%;
+    }
+    picture img {
+      object-fit: contain !important;
+      width: 220px !important;
+      height: 360px !important;
+      margin-left: 60px !important;
+      margin-top: -65px !important;
+    }
+
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
+    }
+  }
+`;
+
+const ImgW = styled(Img)`
+  flex: 1;
+  min-width: 320px;
+  max-height: 381px;
+  margin-left: 2%;
+  margin-right: 30px;
+  overflow: hidden !important;
+
+  img {
+    object-fit: contain !important;
+  }
+
+  @media (max-width: 1024px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media (max-width: 480px) {
+    .tech-stack-box img {
+      flex: 33%;
+    }
+
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
+    }
+
+    picture img {
+      object-fit: contain !important;
+
+      height: 300px !important;
+
+      margin-top: -25px !important;
+    }
+
+    /* picture {
+      height: 200px !important;
+    } */
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+    .tech-stack-box img {
+      flex: 33%;
+    }
+
+    picture img {
+      object-fit: contain !important;
+      width: 220px !important;
+      height: 360px !important;
+      margin-left: 50px !important;
+      margin-top: -65px !important;
+    }
+
+    img:nth-child(1) {
+      max-width: 300px !important;
+      height: 300px !important;
+      position: absolute !important;
+    }
+  }
 `;
