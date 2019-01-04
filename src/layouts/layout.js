@@ -8,6 +8,8 @@ import { IoIosMail } from 'react-icons/io';
 import * as Scroll from 'react-scroll';
 import { Link as ScrollLink, Element, Events } from 'react-scroll';
 import { Helmet } from 'react-helmet';
+import favicon from '../favicon.png';
+
 const Primary = 'rgb(27, 102, 47)';
 
 const ListLink = props => (
@@ -81,33 +83,16 @@ export default class extends Component {
   render() {
     return (
       <>
-        {/* <Helmet
-          title={data.site.siteMetadata.title}
+        <Helmet
+          title="nikmelgarejo.me"
           meta={[
-            {
-              name: 'description',
-              content: 'Nikolas Melgarejo - Full-Stack Web Developer'
-            },
-            {
-              name: 'keywords',
-              content: 'fullstack, developer'
-            }
+            { name: 'description', content: 'Nikolas Melgarejos Portfolio' },
+            { name: 'keywords', content: 'blah' }
           ]}
           link={[
-            {
-              rel: 'icon',
-              type: 'image/png',
-              sizes: '16x16',
-              href: `${favicon}`
-            },
-            {
-              rel: 'icon',
-              type: 'image/png',
-              sizes: '32x32',
-              href: `${favicon}`
-            }
+            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
           ]}
-        /> */}
+        />
         <Header className={this.state.navbar}>
           <H1 onClick={this.scrollToTop}>Nikolas Melgarejo</H1>
           <Ul>
