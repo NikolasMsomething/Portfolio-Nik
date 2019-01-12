@@ -59,7 +59,7 @@ export default function({ data }) {
                 <a
                   className="project-link-target-2"
                   target="_blank"
-                  href="https://github.com/NikolasMsomething/learnery-frontend"
+                  href="https://github.com/NikolasMsomething/Swappuyo-Client"
                 >
                   | DEMO |
                 </a>
@@ -288,6 +288,13 @@ const ProjectsContainer = styled.section`
       border-top: 2px solid #fbb8c5;
       border-left: medium none white !important;
     }
+
+    @media (max-width: 500px) {
+      .tech-stack-box img {
+        display: block;
+        flex: 33%;
+      }
+    }
   }
 `;
 
@@ -302,8 +309,8 @@ const ImgX = styled(Img)`
 
   @media (max-width: 480px) {
     .tech-stack-box img {
-      flex: 33%;
       display: block;
+      flex: 1;
     }
     justify-content: center;
     max-width: 320px;
@@ -361,9 +368,6 @@ const ImgY = styled(Img)`
   }
 
   @media (max-width: 480px) {
-    .tech-stack-box img {
-      flex: 33%;
-    }
     img:nth-child(1) {
       max-width: 300px !important;
       height: 300px !important;

@@ -23,7 +23,7 @@ export default function() {
             </a>
           </span>
           <span>
-            <a target="_blank" href="https://nikolasmlgrj@gmail.com">
+            <a target="_blank" href="mailto:https://nikolasmlgrj@gmail.com">
               <IoIosMail />
             </a>
           </span>
@@ -43,6 +43,17 @@ let ContactContainer = styled.section`
     color: #513519;
     &:hover {
       color: #337ab7;
+    }
+  }
+
+  @media (max-width: 450px) {
+    svg {
+      width: 2.8rem;
+      height: 2.8rem;
+      color: #513519;
+      &:hover {
+        color: #337ab7;
+      }
     }
   }
 

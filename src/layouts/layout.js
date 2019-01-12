@@ -9,7 +9,8 @@ import * as Scroll from 'react-scroll';
 import { Link as ScrollLink, Element, Events } from 'react-scroll';
 import { Helmet } from 'react-helmet';
 import favicon from '../favicon.png';
-
+import HamburgerMenu from 'react-hamburger-menu';
+import { SideDrawer } from '../components/SideDrawer';
 const Primary = 'rgb(27, 102, 47)';
 
 const ListLink = props => (
@@ -33,7 +34,8 @@ export default class extends Component {
   constructor() {
     super();
     this.state = {
-      navbar: ''
+      navbar: '',
+      hamburgerOpen: false
     };
     this.listenScrollEvent = debounce(this.scrollEvent, 10);
   }
@@ -80,6 +82,10 @@ export default class extends Component {
     console.log(to);
   };
 
+  handleBurgerClick = () => {
+    this.setState({ hamburgerOpen: !this.state.hamburgerOpen });
+  };
+
   render() {
     return (
       <>
@@ -105,8 +111,29 @@ export default class extends Component {
             <ListLink offset={-20} name="Contact" to="contact">
               Contact
             </ListLink>
+            <button onClick={this.handleBurgerClick} class="toggle-button">
+              <div class="toggle-button__line" />
+              <div class="toggle-button__line" />
+              <div class="toggle-button__line" />
+            </button>
           </Ul>
         </Header>
+        <SideDrawer
+          burgerClick={this.handleBurgerClick}
+          sideDrawerOpen={this.state.hamburgerOpen}
+        />
+        {this.state.hamburgerOpen && (
+          <BackDropContainer>
+            <div
+              onClick={e => {
+                e.preventDefault();
+                this.handleBurgerClick();
+              }}
+              className="backdrop"
+            />
+          </BackDropContainer>
+        )}
+
         {this.props.children}
         <Footer>
           <h3>
@@ -134,38 +161,109 @@ const Header = styled.header`
   position: fixed;
   top: 0;
   z-index: 100;
-  @media (max-width: 768px) {
-    display: none;
+
+  .hamburger-menu {
+    width: 18px;
+    height: 15px;
+    position: relative;
+    transform: rotate(0deg);
+  }
+
+  .hamburger-menu-span-1 {
+    height: 1px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    margin-top: -1px;
+  }
+  .toggle-button {
+    height: 30px;
+    width: 36px;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+    justify-self: flex-end;
+  }
+  .toggle-button__line {
+    width: 30px;
+    height: 1px;
+    background: white;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+    flex: 2;
+    .toggle-button {
+      height: 30px;
+      width: 36px;
+      background: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 0;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+`;
+
+const BackDropContainer = styled.section`
+  .backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 110;
+    top: 0;
+    left: 0;
   }
 `;
 
 const Ul = styled.ul`
+  .active {
+    border-bottom: 1px solid #513519;
+  }
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  height: auto;
+  align-items: center;
 
-	.active {
-		border-bottom: 1px solid #513519;
-	}
-	display: flex;
-	padding: 10px;
-	height: auto;
-  	align-items: center;
- 	 & {LcLi}.Contact {
-		text-align: right;
-	};
-	& {LcLi}.Projects {
-		text-align: right;
-	};
-	& {LcLi}.About {
-		text-align: right;
-  	};
- 	 & {LcLi}.Name {
-		text-align: left;
-  	};
-	flex: 1;
+  flex: 1;
+  .toggle-button {
+    display: none;
+  }
 
-	@media(max-width: 768px) {
-		display: none;
-	}
-	
+  @media (max-width: 768px) {
+    font-size: 1.3rem;
+    flex: 0.3;
+
+    justify-content: flex-end;
+    .toggle-button {
+      height: 30px;
+      width: 36px;
+      background: transparent;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      visibility: visible;
+      padding: 0;
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 `;
 
 const H1 = styled.h1`
@@ -175,21 +273,36 @@ const H1 = styled.h1`
   padding: 10px;
   text-transform: uppercase;
   flex: 1;
+  text-align: left
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    flex: 10;
+   
+    text-align: left;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 1.5rem;
+    flex: 2;
+  }
 `;
 
 const LcLi = styled.li`
 	display: block;
 	list-style: none;
 	padding: 1rem;
-	flex: 1;
+  flex: 1;
+  text-align: right;
   &{LcA}:visited {
     color: inherit;
   };
   &{LcA} a:hover {
 		cursor: pointer;
-		border-bottom: 1px solid white;
-	
+		border-bottom: 1px solid white; 
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -200,6 +313,9 @@ const LcA = styled(ScrollLink)`
   font-size: 1.15rem;
   margin: auto;
   color: white;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Footer = styled.footer`
