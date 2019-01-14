@@ -28,7 +28,7 @@ export default function({ data }) {
                     target="_blank"
                     href="https://github.com/NikolasMsomething/learnery-frontend"
                   >
-                    | DEMO |
+                    | CLICK FOR DEMO/REPOSITORY |
                   </a>
                 </span>
               </p>
@@ -61,7 +61,7 @@ export default function({ data }) {
                   target="_blank"
                   href="https://github.com/NikolasMsomething/Swappuyo-Client"
                 >
-                  | DEMO |
+                  | CLICK FOR DEMO/REPOSITORY |
                 </a>
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function({ data }) {
                     target="_blank"
                     href="https://buvie.netlify.com/#demo"
                   >
-                    | DEMO |
+                    | CLICK FOR DEMO/REPOSITORY |
                   </a>
                 </p>
               </div>

@@ -8,6 +8,8 @@ export default function() {
   return (
     <Element name="contact" className="contact-scroll-to">
       <ContactContainer>
+        <h2>Let's Talk!</h2>
+        <h3>Find me by clicking an icon below!</h3>
         <div className="contact-icons">
           <span>
             <a target="_blank" href="https://github.com/NikolasMsomething">
@@ -59,6 +61,13 @@ let ContactContainer = styled.section`
 
   h2 {
     font-size: 40px;
+    font-family: Lora;
+    text-align: center !important;
+    margin-bottom: 5%;
+  }
+
+  h3 {
+    font-size: 20px;
     font-family: Lora;
     text-align: center !important;
     margin-bottom: 5%;

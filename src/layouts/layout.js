@@ -42,10 +42,9 @@ export default class extends Component {
 
   componentDidMount() {
     if (window.pageYOffset < 100) {
-      this.setState({ navbar: 'navbar-top' }, () => console.log(this.state));
+      this.setState({ navbar: 'navbar-top' });
     }
 
-    console.log(debounce);
     window.addEventListener('scroll', this.listenScrollEvent);
   }
 
@@ -62,11 +61,9 @@ export default class extends Component {
 
   scrollEvent = () => {
     if (window.pageYOffset > 50 && window.pageXOffset < 100) {
-      this.setState({ navbar: 'navbar-top-off' }, () =>
-        console.log(this.state)
-      );
+      this.setState({ navbar: 'navbar-top-off' });
     } else if (window.pageYOffset === 0) {
-      this.setState({ navbar: 'navbar-top' }, () => console.log(this.state));
+      this.setState({ navbar: 'navbar-top' });
     }
   };
 
@@ -78,9 +75,7 @@ export default class extends Component {
     scroll.scrollToTop();
   };
 
-  handleSetActive = to => {
-    console.log(to);
-  };
+  handleSetActive = to => {};
 
   handleBurgerClick = () => {
     this.setState({ hamburgerOpen: !this.state.hamburgerOpen });
@@ -143,6 +138,7 @@ export default class extends Component {
             </span>
           </h3>
           <h4>Nikolas Melgarejo</h4>
+          <h4>201-381-7943</h4>
         </Footer>
       </>
     );
