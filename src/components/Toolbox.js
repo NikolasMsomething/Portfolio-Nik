@@ -57,7 +57,7 @@ export default function() {
   );
 }
 
-const ToolBox = styled.div`
+const ToolBox = styled.section`
   display: flex;
   justify-content: space-around;
   width: 75%;

@@ -7,8 +7,8 @@ let imgToDisplay;
 
 export default function({ data }) {
   return (
-    <Element name="projects" className="projects-scroll-to">
-      <ProjectsContainer>
+    <ProjectsContainer>
+      <Element name="projects" className="projects-scroll-to">
         <h2>PROJECTS</h2>
 
         <div className="project-box">
@@ -16,21 +16,30 @@ export default function({ data }) {
           <ImgX fixed={data.learneryPic.childImageSharp.fixed} /> {/* </a> */}
           <div className="project-box-text-1">
             <div>
-              <h3>Learnery</h3>
-              <p>
+              <div className="project-box-title-demo">
+                <h3>Learnery</h3>
+                <span className="demo">
+                  <a
+                    className="project-box-button"
+                    target="_blank"
+                    href="https://learnery.netlify.com/demo"
+                  >
+                    DEMO
+                  </a>
+
+                  <a
+                    className="project-box-button-2"
+                    href="https://github.com/NikolasMsomething/learnery-frontend"
+                  >
+                    REPO
+                  </a>
+                </span>
+              </div>
+              <p className="project-box-text-box">
                 Learnery is an app that a fellow engineer and I designed to help
                 students pass software engineering interviews. Students are
                 guided on their quest to succeed through a carefully planned
                 space repetition algorithm. <br />
-                <span className="demo">
-                  <a
-                    className="project-link-target-1"
-                    target="_blank"
-                    href="https://github.com/NikolasMsomething/learnery-frontend"
-                  >
-                    | CLICK FOR DEMO/REPOSITORY |
-                  </a>
-                </span>
               </p>
             </div>
             <div className="project-box-learnery-tech">
@@ -50,22 +59,33 @@ export default function({ data }) {
           <ImgY fixed={data.swappuyoPic.childImageSharp.fixed} />
           <div className="project-box-text-2">
             <div>
-              <h3>Swappuyo</h3>
-              <p>
+              <div className="project-box-title-demo">
+                <h3>Swappuyo</h3>
+                <span className="demo">
+                  <a
+                    className="project-box-button"
+                    target="_blank"
+                    href="https://swappuyo-client.herokuapp.com/demo"
+                  >
+                    DEMO
+                  </a>
+
+                  <a
+                    className="project-box-button-2"
+                    target="_blank"
+                    href="https://github.com/NikolasMsomething/Swappuyo-Client"
+                  >
+                    REPO
+                  </a>
+                </span>
+              </div>
+              <p className="project-box-text-box">
                 Swappuyo is an app that I personally built to scratch an itch I
                 have had for a while. My app lets me efficiently trade on
                 reddit.com. without all of reddit's extra features I wouldn't be
                 needing. <br />
-                <a
-                  className="project-link-target-2"
-                  target="_blank"
-                  href="https://github.com/NikolasMsomething/Swappuyo-Client"
-                >
-                  | CLICK FOR DEMO/REPOSITORY |
-                </a>
               </p>
             </div>
-
             <div>
               <div className="tech-stack-box">
                 <img src="https://icongr.am/devicon/react-original-wordmark.svg?size=60" />
@@ -83,7 +103,26 @@ export default function({ data }) {
 
           <div className="project-box-text-3">
             <div>
-              <h3>Buvie</h3>
+              <div className="project-box-title-demo">
+                <h3>Buvie</h3>
+                <span>
+                  <a
+                    className="project-box-button"
+                    target="_blank"
+                    href="https://buvie.netlify.com/#demo"
+                  >
+                    DEMO
+                  </a>
+
+                  <a
+                    className="project-box-button-2"
+                    target="_blank"
+                    href="https://github.com/thinkful-ei24/buvie-client"
+                  >
+                    REPO
+                  </a>
+                </span>
+              </div>
               <div className="project-box-text-box">
                 <p>
                   Buvie is an app created on the basis of finding people who
@@ -91,13 +130,6 @@ export default function({ data }) {
                   with people all over the world who love the same movies as
                   them and set appropriate times (through conversation) to
                   either watch a movie locally or through the net. <br />
-                  <a
-                    className="project-link-target-3"
-                    target="_blank"
-                    href="https://buvie.netlify.com/#demo"
-                  >
-                    | CLICK FOR DEMO/REPOSITORY |
-                  </a>
                 </p>
               </div>
             </div>
@@ -113,8 +145,8 @@ export default function({ data }) {
             </div>
           </div>
         </div>
-      </ProjectsContainer>
-    </Element>
+      </Element>
+    </ProjectsContainer>
   );
 }
 
@@ -131,8 +163,64 @@ const ProjectsContainer = styled.section`
     margin-bottom: 5%;
   }
 
-  .demo {
-    text-align: right;
+  .project-box-text-box {
+    padding: 2% 0;
+  }
+
+  .project-box-button {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+    color: black;
+    text-decoration: none;
+    background-color: #ace0e8;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    height: 35px;
+    width: 80px;
+    font-family: Raleway;
+    border-radius: 5%;
+  }
+
+  .project-box-button:focus {
+    outline: none;
+  }
+
+  .project-box-button-2 {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+    color: black;
+    text-decoration: none;
+    background-color: black;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    height: 35px;
+    width: 80px;
+    font-family: Raleway;
+    border-radius: 5%;
+  }
+
+  .project-box-button-2:focus {
+    outline: none;
+  }
+
+  .project-box-button-2 a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .project-box-title-demo {
+    display: flex;
+    justify-content: space-between;
   }
 
   .tech-stack-box {
@@ -145,20 +233,20 @@ const ProjectsContainer = styled.section`
 
   .project-link-target-1 {
     text-decoration: none;
-    color: #fcc72f;
+    color: black;
     font-weight: bold;
     text-align: right;
   }
 
   .project-link-target-2 {
     text-decoration: none;
-    color: #4b5a68;
+    color: black;
     font-weight: bold;
   }
 
   .project-link-target-3 {
     text-decoration: none;
-    color: #fbb8c5;
+    color: black;
     font-weight: bold;
   }
 
@@ -293,6 +381,11 @@ const ProjectsContainer = styled.section`
       .tech-stack-box img {
         display: block;
         flex: 33%;
+      }
+
+      .project-box-title-demo {
+        flex-direction: column;
+        align-items: left;
       }
     }
   }

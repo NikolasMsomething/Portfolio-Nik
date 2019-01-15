@@ -14,40 +14,40 @@ import { Link as ScrollLink, Element, Events } from 'react-scroll';
 export default function({ data }) {
   return (
     <>
-      <Element name="about" className="about-scroll-to">
-        <AboutSection>
+      <AboutSection>
+        <Element name="about" className="about-scroll-to">
           <H2>ABOUT ME</H2>
           <AboutMidSection>
             <Img2 fixed={data.mid.childImageSharp.fixed} />
 
             <AboutMidText>
-              <div className="about-mid-section-div">
+              <ul className="about-mid-section-div">
                 <AboutMidSectionH2>What I push myself to be.</AboutMidSectionH2>
-                <AboutMidSectionP>
+                <AboutMidSectionLi>
                   Ever since I was young I always looked to become a top
                   contender in whatever I loved doing. I wanted to become a
                   strong fighting game player, an excellent tinkerer, and the
                   funniest guy around. As I got older I found a new passion that
                   brings challenge and critical thinking. I believe programming
                   brings the best out of me and I'm ever grateful for that.
-                </AboutMidSectionP>
-              </div>
-              <div className="about-mid-section-div">
+                </AboutMidSectionLi>
+              </ul>
+              <ul className="about-mid-section-div">
                 <AboutMidSectionH2>What I am now.</AboutMidSectionH2>
-                <AboutMidSectionP>
+                <AboutMidSectionLi>
                   I am currently a Full-Stack Web Developer available to the
                   NYC/Philadelphia area. Nowadays you'll see me studying hard
                   and practicing to keep myself sharp. Find me in a coffee shop
                   near you!
-                </AboutMidSectionP>
-              </div>
+                </AboutMidSectionLi>
+              </ul>
               <div>
                 <AboutMidSectionH2>
                   <span className="for-fun-title">
                     Life outside of Development?
                   </span>
                 </AboutMidSectionH2>
-                <AboutMidSectionP>
+                <AboutMidSectionLi>
                   <div className="for-fun-box">
                     <div>
                       <FaLaptopCode /> Studying |
@@ -69,12 +69,12 @@ export default function({ data }) {
                       <FaLaughBeam /> Laughing |
                     </div>
                   </div>
-                </AboutMidSectionP>
+                </AboutMidSectionLi>
               </div>
             </AboutMidText>
           </AboutMidSection>
-        </AboutSection>
-      </Element>
+        </Element>
+      </AboutSection>
     </>
   );
 } //hello
@@ -95,7 +95,7 @@ const H2 = styled.h2`
   }
 `;
 
-const AboutMidSection = styled.div`
+const AboutMidSection = styled.ul`
   display: flex;
   width: 75%;
   margin: 0 auto;
@@ -150,7 +150,7 @@ const AboutMidSectionH2 = styled.h2`
   }
 `;
 
-const AboutMidSectionP = styled.div`
+const AboutMidSectionLi = styled.li`
   font-family: Raleway;
 
   @media (max-width: 1024px) {

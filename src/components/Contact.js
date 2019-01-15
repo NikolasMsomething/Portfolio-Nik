@@ -6,9 +6,8 @@ import { Link as ScrollLink, Element, Events } from 'react-scroll';
 
 export default function() {
   return (
-    <Element name="contact" className="contact-scroll-to">
-      <ContactContainer>
-        <h2>Let's Talk!</h2>
+    <ContactContainer>
+      <Element name="contact" className="contact-scroll-to">
         <h3>Find me by clicking an icon below!</h3>
         <div className="contact-icons">
           <span>
@@ -30,13 +29,13 @@ export default function() {
             </a>
           </span>
         </div>
-      </ContactContainer>
-    </Element>
+      </Element>
+    </ContactContainer>
   );
 }
 
 let ContactContainer = styled.section`
-  padding-top: 16%;
+  padding-top: 20%;
   padding-bottom: 20%;
 
   svg {

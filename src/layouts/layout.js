@@ -97,13 +97,13 @@ export default class extends Component {
         <Header className={this.state.navbar}>
           <H1 onClick={this.scrollToTop}>Nikolas Melgarejo</H1>
           <Ul>
-            <ListLink offset={-80} name="About" to="about">
+            <ListLink offset={-110} name="About" to="about">
               About
             </ListLink>
-            <ListLink offset={-80} name="Projects" to="projects">
+            <ListLink offset={-110} name="Projects" to="projects">
               Projects
             </ListLink>
-            <ListLink offset={-20} name="Contact" to="contact">
+            <ListLink offset={-200} name="Contact" to="contact">
               Contact
             </ListLink>
             <button onClick={this.handleBurgerClick} class="toggle-button">

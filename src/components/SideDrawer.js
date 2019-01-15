@@ -27,7 +27,7 @@ export const SideDrawer = props => {
 
   return (
     <Nav>
-      <div className={drawerClasses.join('')}>
+      <section className={drawerClasses.join('')}>
         <ul>
           <ListLink
             clicked={e => props.burgerClick()}
@@ -54,7 +54,7 @@ export const SideDrawer = props => {
             Contact
           </ListLink>
         </ul>
-      </div>
+      </section>
     </Nav>
   );
 };
