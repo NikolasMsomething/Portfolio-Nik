@@ -28,6 +28,7 @@ export default function({ data }) {
                   </a>
 
                   <a
+                    target="_blank"
                     className="project-box-button-2"
                     href="https://github.com/NikolasMsomething/learnery-frontend"
                   >
