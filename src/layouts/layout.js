@@ -11,6 +11,8 @@ import { Helmet } from 'react-helmet';
 import favicon from '../favicon.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import { SideDrawer } from '../components/SideDrawer';
+import linkedinImg from '../portfolio/screenshots/linkedin.jpg'
+
 const Primary = 'rgb(27, 102, 47)';
 
 const ListLink = props => (
@@ -88,7 +90,11 @@ export default class extends Component {
           title="nikmelgarejo.me"
           meta={[
             { name: 'description', content: 'Nikolas Melgarejos Portfolio' },
-            { name: 'keywords', content: 'blah' }
+            { name: 'keywords', content: 'blah' },
+            { property="og:title", content: "Nikolas Melgarejo Portfolio"},
+            { property="og:image", content: linkedinImg},
+            { property="og:description", content="test"},
+            { proprety="og:url", content="nikmelgarejo.me"}
           ]}
           link={[
             { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
